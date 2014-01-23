@@ -11,6 +11,7 @@
       </FileInfo>
     </File>
     <Config>
+      <Option Name="TargetConstrsFile" Val="$PSRCDIR/constrs_1/imports/new/adi_pl_sdrdc1.ucf"/>
       <Option Name="ConstrsType" Val="UCF"/>
     </Config>
   </FileSet>

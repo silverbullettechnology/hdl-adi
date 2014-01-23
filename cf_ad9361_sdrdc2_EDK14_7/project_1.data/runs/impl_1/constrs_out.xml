@@ -58,6 +58,7 @@
       </FileInfo>
     </File>
     <Config>
+      <Option Name="TargetConstrsFile" Val="$PRUNDIR/impl_1/.constrs/adi_pl_sdrdc1.ucf"/>
       <Option Name="ConstrsType" Val="UCF"/>
     </Config>
   </FileSet>
