@@ -25,6 +25,15 @@ UcfFile: data/system.ucf
 EnableParTimingError: 1
 ShowLicenseDialog: 1
 BInfo: 
+LockAddr: axi_gpio_0,C_BASEADDR
+LockAddr: axi_ad9361_1,C_BASEADDR
+LockAddr: axi_dmac_2,C_BASEADDR
+LockAddr: axi_dmac_3,C_BASEADDR
+LockAddr: axi_xadc_0,C_BASEADDR
+LockAddr: version_info_0,C_BASEADDR
+LockAddr: axi_ad9361_0,C_BASEADDR
+LockAddr: axi_dmac_0,C_BASEADDR
+LockAddr: axi_dmac_1,C_BASEADDR
 Processor: processing_system7_0
 ElfImp: 
 ElfSim: 

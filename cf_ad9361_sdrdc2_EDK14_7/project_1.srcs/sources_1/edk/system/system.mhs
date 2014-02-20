@@ -264,7 +264,7 @@ BEGIN axi_ad9361
  PORT dev_dbg_trigger = dev_dbg_trigger_0
  PORT dev_dbg_data = dev_dbg_data_0
  PORT dac_drd = axi_ad9361_0_dac_drd
- PORT dac_ddata = axi_dmac_1_fifo_rd_dout
+ PORT dac_ddata = swap_channel_0_dac_ddata
  PORT dac_dvalid = axi_dmac_1_fifo_rd_valid
  PORT adc_dvalid = axi_ad9361_0_adc_dvalid
  PORT adc_ddata = axi_ad9361_0_adc_ddata
@@ -305,7 +305,7 @@ BEGIN axi_dmac
  PORT m_dest_axi_aclk = processing_system7_0_FCLK_CLK2
  PORT fifo_wr_clk = clk_0
  PORT fifo_wr_en = axi_ad9361_0_adc_dvalid
- PORT fifo_wr_din = axi_ad9361_0_adc_ddata
+ PORT fifo_wr_din = swap_channel_0_fifo_wr_din
  PORT irq = axi_dmac_0_irq
  PORT fifo_wr_overflow = axi_dmac_0_fifo_wr_overflow
  PORT fifo_wr_sync = axi_ad9361_0_adc_dsync
@@ -315,7 +315,7 @@ BEGIN axi_dmac
  PARAMETER INSTANCE = axi_dmac_1
  PARAMETER HW_VER = 1.00.a
  PARAMETER C_DMA_TYPE_DEST = 2
- PARAMETER C_CYCLIC = 1
+ PARAMETER C_CYCLIC = 0
  PARAMETER C_AXI_SLICE_DEST = 1
  PARAMETER C_BASEADDR = 0x7c420000
  PARAMETER C_HIGHADDR = 0x7c42ffff
@@ -364,7 +364,7 @@ BEGIN axi_ad9361
  PORT dev_dbg_trigger = dev_dbg_trigger_1
  PORT dev_dbg_data = dev_dbg_data_1
  PORT dac_drd = axi_ad9361_1_dac_drd
- PORT dac_ddata = axi_dmac_3_fifo_rd_dout
+ PORT dac_ddata = swap_channel_1_dac_ddata
  PORT dac_dvalid = axi_dmac_3_fifo_rd_valid
  PORT adc_dvalid = axi_ad9361_1_adc_dvalid
  PORT adc_ddata = axi_ad9361_1_adc_ddata
@@ -405,7 +405,7 @@ BEGIN axi_dmac
  PORT m_dest_axi_aclk = processing_system7_0_FCLK_CLK2
  PORT fifo_wr_clk = clk_1
  PORT fifo_wr_en = axi_ad9361_1_adc_dvalid
- PORT fifo_wr_din = axi_ad9361_1_adc_ddata
+ PORT fifo_wr_din = swap_channel_1_fifo_wr_din
  PORT irq = axi_dmac_2_irq
  PORT fifo_wr_overflow = axi_dmac_2_fifo_wr_overflow
  PORT fifo_wr_sync = axi_ad9361_1_adc_dsync
@@ -415,7 +415,7 @@ BEGIN axi_dmac
  PARAMETER INSTANCE = axi_dmac_3
  PARAMETER HW_VER = 1.00.a
  PARAMETER C_DMA_TYPE_DEST = 2
- PARAMETER C_CYCLIC = 1
+ PARAMETER C_CYCLIC = 0
  PARAMETER C_AXI_SLICE_DEST = 1
  PARAMETER C_BASEADDR = 0x7c460000
  PARAMETER C_HIGHADDR = 0x7c46ffff
@@ -437,6 +437,8 @@ END
 BEGIN chipscope_axi_monitor
  PARAMETER INSTANCE = chipscope_axi_monitor_0
  PARAMETER HW_VER = 3.05.a
+ PARAMETER C_USE_INTERFACE = 0
+ PARAMETER C_NUM_DATA_SAMPLES = 1024
  BUS_INTERFACE MON_AXI = processing_system7_0.S_AXI_HP3
  PORT CHIPSCOPE_ICON_CONTROL = chipscope_icon_0_control2
 END
@@ -474,9 +476,67 @@ END
 BEGIN chipscope_icon
  PARAMETER INSTANCE = chipscope_icon_0
  PARAMETER HW_VER = 1.06.a
- PARAMETER C_NUM_CONTROL_PORTS = 3
+ PARAMETER C_NUM_CONTROL_PORTS = 5
  PORT control0 = chipscope_ila_0_CHIPSCOPE_ILA_CONTROL_0
  PORT control1 = chipscope_ila_0_CHIPSCOPE_ILA_CONTROL_1
  PORT control2 = chipscope_icon_0_control2
+ PORT control3 = chipscope_axi_monitor_1_icon_ctrl
+ PORT control4 = chipscope_ila_2_icon_control
+END
+
+BEGIN version_info
+ PARAMETER INSTANCE = version_info_0
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_BASEADDR = 0x44200000
+ PARAMETER C_HIGHADDR = 0x44200fff
+ BUS_INTERFACE S_AXI = axi_interconnect_gp0
+ PORT S_AXI_ACLK = processing_system7_0_FCLK_CLK0
+END
+
+BEGIN chipscope_axi_monitor
+ PARAMETER INSTANCE = chipscope_axi_monitor_1
+ PARAMETER HW_VER = 3.05.a
+ PARAMETER C_MAX_SEQUENCER_LEVELS = 2
+ PARAMETER C_USE_INTERFACE = 0
+ PARAMETER C_NUM_DATA_SAMPLES = 1024
+ BUS_INTERFACE MON_AXI = processing_system7_0.S_AXI_HP2
+ PORT chipscope_icon_control = chipscope_axi_monitor_1_icon_ctrl
+END
+
+BEGIN chipscope_ila
+ PARAMETER INSTANCE = chipscope_ila_2
+ PARAMETER HW_VER = 1.05.a
+ PARAMETER C_TRIG0_UNITS = 1
+ PARAMETER C_NUM_DATA_SAMPLES = 4096
+ PARAMETER C_TRIG0_TRIGGER_IN_WIDTH = 136
+ PORT chipscope_ila_control = chipscope_ila_2_icon_control
+ PORT CLK = clk_1
+ PORT TRIG0 = axi_dmac_2_irq & axi_dmac_3_irq & axi_ad9361_1_adc_dsync & axi_ad9361_1_adc_dvalid & axi_dmac_2_fifo_wr_overflow & axi_dmac_3_fifo_rd_underflow & axi_dmac_3_fifo_rd_valid & axi_ad9361_1_dac_drd & swap_channel_1_dac_ddata & swap_channel_1_fifo_wr_din
+END
+
+BEGIN swap_channel
+ PARAMETER INSTANCE = swap_channel_0
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_BASEADDR = 0x79010000
+ PARAMETER C_HIGHADDR = 0x79010FFF
+ BUS_INTERFACE S_AXI = axi_interconnect_gp0
+ PORT S_AXI_ACLK = processing_system7_0_FCLK_CLK0
+ PORT adc_ddata = axi_ad9361_0_adc_ddata
+ PORT dac_ddata = swap_channel_0_dac_ddata
+ PORT fifo_wr_din = swap_channel_0_fifo_wr_din
+ PORT fifo_rd_dout = axi_dmac_1_fifo_rd_dout
+END
+
+BEGIN swap_channel
+ PARAMETER INSTANCE = swap_channel_1
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_BASEADDR = 0x79030000
+ PARAMETER C_HIGHADDR = 0x79030FFF
+ BUS_INTERFACE S_AXI = axi_interconnect_gp0
+ PORT S_AXI_ACLK = processing_system7_0_FCLK_CLK0
+ PORT adc_ddata = axi_ad9361_1_adc_ddata
+ PORT dac_ddata = swap_channel_1_dac_ddata
+ PORT fifo_wr_din = swap_channel_1_fifo_wr_din
+ PORT fifo_rd_dout = axi_dmac_3_fifo_rd_dout
 END
 
