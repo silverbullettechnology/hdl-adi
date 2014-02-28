@@ -3,228 +3,193 @@
 
   <CompositeFile CanBeSetAsTop="false" CanDisplayChildGraph="false" CompositeFileTopName="system" Part="xc7z030fbg484-2">
     <Description>A description of the composite file</Description>
-    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1392336825"/>
-    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1392336825"/>
+    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1392922411"/>
+    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1392922411"/>
     <Generation Name="SIMULATION" State="RESET" Timestamp="1387310035"/>
     <FileCollection Name="SOURCES" Type="SOURCES">
       <Description>A description for this file collection</Description>
       <File Name="system.mhs" Type="MHS">
         <Description>This is MHS file</Description>
-        <Properties IsDisabled="false" IsEditable="true" IsTrackable="true" IsUserDisableable="false" IsVisible="true" Timestamp="1392336512"/>
+        <Properties IsDisabled="false" IsEditable="true" IsTrackable="true" IsUserDisableable="false" IsVisible="true" Timestamp="1392921058"/>
         <UsedIn Val="NONE"/>
       </File>
       <File Name="data/ps7_system_prj.xml" Type="PS7XML">
         <Description>This is PS7 XML file</Description>
-        <Properties IsDisabled="false" IsEditable="true" IsTrackable="true" IsUserDisableable="false" IsVisible="false" Timestamp="1391796012"/>
+        <Properties IsDisabled="false" IsEditable="true" IsTrackable="true" IsUserDisableable="false" IsVisible="false" Timestamp="1392916623"/>
         <UsedIn Val="SYNTHESIS"/>
       </File>
       <File Name="implementation/system.ngc" Type="NGC">
         <Description>This is NGC file</Description>
-        <Properties IsDisabled="false" IsEditable="false" IsTrackable="false" IsUserDisableable="false" IsVisible="true" Timestamp="1392336929"/>
-        <UsedIn Val="SYNTHESIS"/>
+        <Properties IsDisabled="false" IsEditable="false" IsTrackable="false" IsUserDisableable="false" IsVisible="true" Timestamp="1392922411"/>
         <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SYNTHESIS"/>
       </File>
       <File Name="hdl/system.v" Type="VERILOG">
         <Description>This is VERILOG file</Description>
-        <Properties IsDisabled="false" IsEditable="false" IsTrackable="true" IsUserDisableable="false" IsVisible="true" Timestamp="1392336584"/>
+        <Properties IsDisabled="false" IsEditable="false" IsTrackable="true" IsUserDisableable="false" IsVisible="true" Timestamp="1392922019"/>
         <UsedIn Val="SYNTHESIS"/>
       </File>
       <File Name="implementation/system_processing_system7_0_wrapper.ncf" Type="NCF">
         <Description>This is NCF file</Description>
-        <Properties IsDisabled="false" IsEditable="false" IsTrackable="false" IsUserDisableable="false" IsVisible="true" Timestamp="1391796128"/>
+        <Properties IsDisabled="false" IsEditable="false" IsTrackable="false" IsUserDisableable="true" IsVisible="true" Timestamp="1392922017"/>
         <UsedIn Val="IMPLEMENTATION"/>
       </File>
       <File Name="implementation/system_processing_system7_0_wrapper.ngc" Type="NGC">
         <Description>This is NGC file</Description>
-        <Properties IsDisabled="false" IsEditable="false" IsTrackable="false" IsUserDisableable="false" IsVisible="true" Timestamp="1392336578"/>
+        <Properties IsDisabled="false" IsEditable="false" IsTrackable="false" IsUserDisableable="false" IsVisible="true" Timestamp="1392922034"/>
         <UsedIn Val="SYNTHESIS"/>
         <UsedIn Val="IMPLEMENTATION"/>
       </File>
       <File Name="implementation/system_axi_interconnect_gp0_wrapper.ncf" Type="NCF">
         <Description>This is NCF file</Description>
-        <Properties IsDisabled="false" IsEditable="false" IsTrackable="false" IsUserDisableable="false" IsVisible="true" Timestamp="1392334959"/>
+        <Properties IsDisabled="false" IsEditable="false" IsTrackable="false" IsUserDisableable="true" IsVisible="true" Timestamp="1392922017"/>
         <UsedIn Val="IMPLEMENTATION"/>
       </File>
       <File Name="implementation/system_axi_interconnect_gp0_wrapper.ngc" Type="NGC">
         <Description>This is NGC file</Description>
-        <Properties IsDisabled="false" IsEditable="false" IsTrackable="false" IsUserDisableable="false" IsVisible="true" Timestamp="1392336578"/>
+        <Properties IsDisabled="false" IsEditable="false" IsTrackable="false" IsUserDisableable="false" IsVisible="true" Timestamp="1392922344"/>
         <UsedIn Val="SYNTHESIS"/>
         <UsedIn Val="IMPLEMENTATION"/>
       </File>
       <File Name="implementation/system_axi_xadc_0_wrapper.ngc" Type="NGC">
         <Description>This is NGC file</Description>
-        <Properties IsDisabled="false" IsEditable="false" IsTrackable="false" IsUserDisableable="false" IsVisible="true" Timestamp="1392336578"/>
+        <Properties IsDisabled="false" IsEditable="false" IsTrackable="false" IsUserDisableable="false" IsVisible="true" Timestamp="1392922071"/>
         <UsedIn Val="SYNTHESIS"/>
         <UsedIn Val="IMPLEMENTATION"/>
       </File>
       <File Name="implementation/system_axi_gpio_0_wrapper.ngc" Type="NGC">
         <Description>This is NGC file</Description>
-        <Properties IsDisabled="false" IsEditable="false" IsTrackable="false" IsUserDisableable="false" IsVisible="true" Timestamp="1392336578"/>
+        <Properties IsDisabled="false" IsEditable="false" IsTrackable="false" IsUserDisableable="false" IsVisible="true" Timestamp="1392922084"/>
         <UsedIn Val="SYNTHESIS"/>
         <UsedIn Val="IMPLEMENTATION"/>
       </File>
       <File Name="implementation/system_axi_ad9361_0_wrapper.ngc" Type="NGC">
         <Description>This is NGC file</Description>
-        <Properties IsDisabled="false" IsEditable="false" IsTrackable="false" IsUserDisableable="false" IsVisible="true" Timestamp="1392336818"/>
+        <Properties IsDisabled="false" IsEditable="false" IsTrackable="false" IsUserDisableable="false" IsVisible="true" Timestamp="1392922351"/>
         <UsedIn Val="SYNTHESIS"/>
         <UsedIn Val="IMPLEMENTATION"/>
       </File>
       <File Name="implementation/system_axi_interconnect_0_wrapper.ncf" Type="NCF">
         <Description>This is NCF file</Description>
-        <Properties IsDisabled="false" IsEditable="false" IsTrackable="false" IsUserDisableable="false" IsVisible="true" Timestamp="1391796128"/>
+        <Properties IsDisabled="false" IsEditable="false" IsTrackable="false" IsUserDisableable="true" IsVisible="true" Timestamp="1392922017"/>
         <UsedIn Val="IMPLEMENTATION"/>
       </File>
       <File Name="implementation/system_axi_interconnect_0_wrapper.ngc" Type="NGC">
         <Description>This is NGC file</Description>
-        <Properties IsDisabled="false" IsEditable="false" IsTrackable="false" IsUserDisableable="false" IsVisible="true" Timestamp="1392336578"/>
+        <Properties IsDisabled="false" IsEditable="false" IsTrackable="false" IsUserDisableable="false" IsVisible="true" Timestamp="1392922357"/>
         <UsedIn Val="SYNTHESIS"/>
         <UsedIn Val="IMPLEMENTATION"/>
       </File>
       <File Name="implementation/system_axi_interconnect_1_wrapper.ncf" Type="NCF">
         <Description>This is NCF file</Description>
-        <Properties IsDisabled="false" IsEditable="false" IsTrackable="false" IsUserDisableable="false" IsVisible="true" Timestamp="1391796128"/>
+        <Properties IsDisabled="false" IsEditable="false" IsTrackable="false" IsUserDisableable="true" IsVisible="true" Timestamp="1392922017"/>
         <UsedIn Val="IMPLEMENTATION"/>
       </File>
       <File Name="implementation/system_axi_interconnect_1_wrapper.ngc" Type="NGC">
         <Description>This is NGC file</Description>
-        <Properties IsDisabled="false" IsEditable="false" IsTrackable="false" IsUserDisableable="false" IsVisible="true" Timestamp="1392336578"/>
+        <Properties IsDisabled="false" IsEditable="false" IsTrackable="false" IsUserDisableable="false" IsVisible="true" Timestamp="1392922364"/>
         <UsedIn Val="SYNTHESIS"/>
         <UsedIn Val="IMPLEMENTATION"/>
       </File>
       <File Name="implementation/system_axi_dmac_0_wrapper.ngc" Type="NGC">
         <Description>This is NGC file</Description>
-        <Properties IsDisabled="false" IsEditable="false" IsTrackable="false" IsUserDisableable="false" IsVisible="true" Timestamp="1392336663"/>
+        <Properties IsDisabled="false" IsEditable="false" IsTrackable="false" IsUserDisableable="false" IsVisible="true" Timestamp="1392922175"/>
         <UsedIn Val="SYNTHESIS"/>
         <UsedIn Val="IMPLEMENTATION"/>
       </File>
       <File Name="implementation/system_axi_dmac_1_wrapper.ngc" Type="NGC">
         <Description>This is NGC file</Description>
-        <Properties IsDisabled="false" IsEditable="false" IsTrackable="false" IsUserDisableable="false" IsVisible="true" Timestamp="1392336679"/>
+        <Properties IsDisabled="false" IsEditable="false" IsTrackable="false" IsUserDisableable="false" IsVisible="true" Timestamp="1392922189"/>
         <UsedIn Val="SYNTHESIS"/>
         <UsedIn Val="IMPLEMENTATION"/>
       </File>
       <File Name="implementation/system_axi_ad9361_1_wrapper.ngc" Type="NGC">
         <Description>This is NGC file</Description>
-        <Properties IsDisabled="false" IsEditable="false" IsTrackable="false" IsUserDisableable="false" IsVisible="true" Timestamp="1392336825"/>
+        <Properties IsDisabled="false" IsEditable="false" IsTrackable="false" IsUserDisableable="false" IsVisible="true" Timestamp="1392922371"/>
         <UsedIn Val="SYNTHESIS"/>
         <UsedIn Val="IMPLEMENTATION"/>
       </File>
       <File Name="implementation/system_axi_interconnect_2_wrapper.ncf" Type="NCF">
         <Description>This is NCF file</Description>
-        <Properties IsDisabled="false" IsEditable="false" IsTrackable="false" IsUserDisableable="false" IsVisible="true" Timestamp="1391796128"/>
+        <Properties IsDisabled="false" IsEditable="false" IsTrackable="false" IsUserDisableable="true" IsVisible="true" Timestamp="1392922017"/>
         <UsedIn Val="IMPLEMENTATION"/>
       </File>
       <File Name="implementation/system_axi_interconnect_2_wrapper.ngc" Type="NGC">
         <Description>This is NGC file</Description>
-        <Properties IsDisabled="false" IsEditable="false" IsTrackable="false" IsUserDisableable="false" IsVisible="true" Timestamp="1392336580"/>
+        <Properties IsDisabled="false" IsEditable="false" IsTrackable="false" IsUserDisableable="false" IsVisible="true" Timestamp="1392922377"/>
         <UsedIn Val="SYNTHESIS"/>
         <UsedIn Val="IMPLEMENTATION"/>
       </File>
       <File Name="implementation/system_axi_interconnect_3_wrapper.ncf" Type="NCF">
         <Description>This is NCF file</Description>
-        <Properties IsDisabled="false" IsEditable="false" IsTrackable="false" IsUserDisableable="false" IsVisible="true" Timestamp="1391796128"/>
+        <Properties IsDisabled="false" IsEditable="false" IsTrackable="false" IsUserDisableable="true" IsVisible="true" Timestamp="1392922017"/>
         <UsedIn Val="IMPLEMENTATION"/>
       </File>
       <File Name="implementation/system_axi_interconnect_3_wrapper.ngc" Type="NGC">
         <Description>This is NGC file</Description>
-        <Properties IsDisabled="false" IsEditable="false" IsTrackable="false" IsUserDisableable="false" IsVisible="true" Timestamp="1392336580"/>
+        <Properties IsDisabled="false" IsEditable="false" IsTrackable="false" IsUserDisableable="false" IsVisible="true" Timestamp="1392922383"/>
         <UsedIn Val="SYNTHESIS"/>
         <UsedIn Val="IMPLEMENTATION"/>
       </File>
       <File Name="implementation/system_axi_dmac_2_wrapper.ngc" Type="NGC">
         <Description>This is NGC file</Description>
-        <Properties IsDisabled="false" IsEditable="false" IsTrackable="false" IsUserDisableable="false" IsVisible="true" Timestamp="1392336760"/>
+        <Properties IsDisabled="false" IsEditable="false" IsTrackable="false" IsUserDisableable="false" IsVisible="true" Timestamp="1392922284"/>
         <UsedIn Val="SYNTHESIS"/>
         <UsedIn Val="IMPLEMENTATION"/>
       </File>
       <File Name="implementation/system_axi_dmac_3_wrapper.ngc" Type="NGC">
         <Description>This is NGC file</Description>
-        <Properties IsDisabled="false" IsEditable="false" IsTrackable="false" IsUserDisableable="false" IsVisible="true" Timestamp="1392336776"/>
+        <Properties IsDisabled="false" IsEditable="false" IsTrackable="false" IsUserDisableable="false" IsVisible="true" Timestamp="1392922298"/>
         <UsedIn Val="SYNTHESIS"/>
         <UsedIn Val="IMPLEMENTATION"/>
       </File>
       <File Name="implementation/system_chipscope_axi_monitor_0_wrapper.ngc" Type="NGC">
         <Description>This is NGC file</Description>
-        <Properties IsDisabled="false" IsEditable="false" IsTrackable="false" IsUserDisableable="false" IsVisible="true" Timestamp="1392336580"/>
+        <Properties IsDisabled="false" IsEditable="false" IsTrackable="false" IsUserDisableable="false" IsVisible="true" Timestamp="1392922392"/>
         <UsedIn Val="SYNTHESIS"/>
         <UsedIn Val="IMPLEMENTATION"/>
       </File>
       <File Name="implementation/system_chipscope_ila_0_wrapper.ncf" Type="NCF">
         <Description>This is NCF file</Description>
-        <Properties IsDisabled="false" IsEditable="false" IsTrackable="false" IsUserDisableable="false" IsVisible="true" Timestamp="1391734423"/>
+        <Properties IsDisabled="false" IsEditable="false" IsTrackable="false" IsUserDisableable="true" IsVisible="true" Timestamp="1392921409"/>
         <UsedIn Val="IMPLEMENTATION"/>
       </File>
       <File Name="implementation/system_chipscope_ila_0_wrapper.ngc" Type="NGC">
         <Description>This is NGC file</Description>
-        <Properties IsDisabled="false" IsEditable="false" IsTrackable="false" IsUserDisableable="false" IsVisible="true" Timestamp="1392336580"/>
+        <Properties IsDisabled="false" IsEditable="false" IsTrackable="false" IsUserDisableable="false" IsVisible="true" Timestamp="1392922398"/>
         <UsedIn Val="SYNTHESIS"/>
         <UsedIn Val="IMPLEMENTATION"/>
       </File>
       <File Name="implementation/system_chipscope_ila_1_wrapper.ncf" Type="NCF">
         <Description>This is NCF file</Description>
-        <Properties IsDisabled="false" IsEditable="false" IsTrackable="false" IsUserDisableable="false" IsVisible="true" Timestamp="1391734564"/>
+        <Properties IsDisabled="false" IsEditable="false" IsTrackable="false" IsUserDisableable="true" IsVisible="true" Timestamp="1392921550"/>
         <UsedIn Val="IMPLEMENTATION"/>
       </File>
       <File Name="implementation/system_chipscope_ila_1_wrapper.ngc" Type="NGC">
         <Description>This is NGC file</Description>
-        <Properties IsDisabled="false" IsEditable="false" IsTrackable="false" IsUserDisableable="false" IsVisible="true" Timestamp="1392336580"/>
+        <Properties IsDisabled="false" IsEditable="false" IsTrackable="false" IsUserDisableable="false" IsVisible="true" Timestamp="1392922404"/>
         <UsedIn Val="SYNTHESIS"/>
         <UsedIn Val="IMPLEMENTATION"/>
       </File>
       <File Name="implementation/system_chipscope_icon_0_wrapper.ncf" Type="NCF">
         <Description>This is NCF file</Description>
-        <Properties IsDisabled="false" IsEditable="false" IsTrackable="false" IsUserDisableable="false" IsVisible="true" Timestamp="1392235436"/>
+        <Properties IsDisabled="false" IsEditable="false" IsTrackable="false" IsUserDisableable="true" IsVisible="true" Timestamp="1392921598"/>
         <UsedIn Val="IMPLEMENTATION"/>
       </File>
       <File Name="implementation/system_chipscope_icon_0_wrapper.ngc" Type="NGC">
         <Description>This is NGC file</Description>
-        <Properties IsDisabled="false" IsEditable="false" IsTrackable="false" IsUserDisableable="false" IsVisible="true" Timestamp="1392336580"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-      </File>
-      <File Name="implementation/system_version_info_0_wrapper.ngc" Type="NGC">
-        <Description>This is NGC file</Description>
-        <Properties IsDisabled="false" IsEditable="false" IsTrackable="false" IsUserDisableable="false" IsVisible="true" Timestamp="1392336787"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-      </File>
-      <File Name="implementation/system_chipscope_axi_monitor_1_wrapper.ngc" Type="NGC">
-        <Description>This is NGC file</Description>
-        <Properties IsDisabled="false" IsEditable="false" IsTrackable="false" IsUserDisableable="false" IsVisible="true" Timestamp="1392336580"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-      </File>
-      <File Name="implementation/system_chipscope_ila_2_wrapper.ncf" Type="NCF">
-        <Description>This is NCF file</Description>
-        <Properties IsDisabled="false" IsEditable="false" IsTrackable="false" IsUserDisableable="false" IsVisible="true" Timestamp="1392319590"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-      </File>
-      <File Name="implementation/system_chipscope_ila_2_wrapper.ngc" Type="NGC">
-        <Description>This is NGC file</Description>
-        <Properties IsDisabled="false" IsEditable="false" IsTrackable="false" IsUserDisableable="false" IsVisible="true" Timestamp="1392336580"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-      </File>
-      <File Name="implementation/system_swap_channel_0_wrapper.ngc" Type="NGC">
-        <Description>This is NGC file</Description>
-        <Properties IsDisabled="false" IsEditable="false" IsTrackable="false" IsUserDisableable="false" IsVisible="true" Timestamp="1392336799"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-      </File>
-      <File Name="implementation/system_swap_channel_1_wrapper.ngc" Type="NGC">
-        <Description>This is NGC file</Description>
-        <Properties IsDisabled="false" IsEditable="false" IsTrackable="false" IsUserDisableable="false" IsVisible="true" Timestamp="1392336811"/>
+        <Properties IsDisabled="false" IsEditable="false" IsTrackable="false" IsUserDisableable="false" IsVisible="true" Timestamp="1392922410"/>
         <UsedIn Val="SYNTHESIS"/>
         <UsedIn Val="IMPLEMENTATION"/>
       </File>
       <File Name="data/system.ucf" Type="UCF">
         <Description>This is UCF file</Description>
-        <Properties IsDisabled="false" IsEditable="true" IsTrackable="true" IsUserDisableable="false" IsVisible="true" Timestamp="1387310035"/>
+        <Properties IsDisabled="false" IsEditable="true" IsTrackable="true" IsUserDisableable="false" IsVisible="true" Timestamp="1392916623"/>
         <UsedIn Val="NONE"/>
       </File>
       <File Name="data/system.ncf" Type="NCF">
         <Description>This is NCF file</Description>
-        <Properties IsDisabled="false" IsEditable="false" IsTrackable="true" IsUserDisableable="false" IsVisible="false" Timestamp="1392418226"/>
+        <Properties IsDisabled="false" IsEditable="false" IsTrackable="true" IsUserDisableable="false" IsVisible="false" Timestamp="1392922411"/>
         <UsedIn Val="IMPLEMENTATION"/>
       </File>
     </FileCollection>
