@@ -52,6 +52,11 @@
         <Attr Name="UsedInImplementation" Val="1"/>
       </FileInfo>
     </File>
+    <File Path="$PRUNDIR/impl_1/.constrs/system_gmii_to_rgmii_0_wrapper.ncf">
+      <FileInfo>
+        <Attr Name="UsedInImplementation" Val="1"/>
+      </FileInfo>
+    </File>
     <File Path="$PRUNDIR/impl_1/.constrs/system_processing_system7_0_wrapper.ncf">
       <FileInfo>
         <Attr Name="UsedInImplementation" Val="1"/>
