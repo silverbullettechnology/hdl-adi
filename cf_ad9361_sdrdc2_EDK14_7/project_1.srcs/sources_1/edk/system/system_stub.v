@@ -54,8 +54,16 @@ module system_stub
     spi_miso,
     spi_cs0,
     spi_cs1,
+    AXI_GPIO_I,
     ps7_gpio,
-    AXI_GPIO_I
+    rgmii_txd,
+    rgmii_tx_ctl,
+    rgmii_txc,
+    rgmii_rxd,
+    rgmii_rx_ctl,
+    rgmii_rxc,
+    MDC,
+    gmii_to_rgmii_0_MDIO
   );
   inout [53:0] processing_system7_0_MIO;
   input processing_system7_0_PS_SRSTB_pin;
@@ -107,8 +115,16 @@ module system_stub
   input spi_miso;
   output spi_cs0;
   output spi_cs1;
-  inout [53:0] ps7_gpio;
   input [23:0] AXI_GPIO_I;
+  inout [39:0] ps7_gpio;
+  output [3:0] rgmii_txd;
+  output rgmii_tx_ctl;
+  output rgmii_txc;
+  input [3:0] rgmii_rxd;
+  input rgmii_rx_ctl;
+  input rgmii_rxc;
+  output MDC;
+  inout gmii_to_rgmii_0_MDIO;
 
   (* BOX_TYPE = "user_black_box" *)
   system
@@ -163,8 +179,16 @@ module system_stub
       .spi_miso ( spi_miso ),
       .spi_cs0 ( spi_cs0 ),
       .spi_cs1 ( spi_cs1 ),
+      .AXI_GPIO_I ( AXI_GPIO_I ),
       .ps7_gpio ( ps7_gpio ),
-      .AXI_GPIO_I ( AXI_GPIO_I )
+      .rgmii_txd ( rgmii_txd ),
+      .rgmii_tx_ctl ( rgmii_tx_ctl ),
+      .rgmii_txc ( rgmii_txc ),
+      .rgmii_rxd ( rgmii_rxd ),
+      .rgmii_rx_ctl ( rgmii_rx_ctl ),
+      .rgmii_rxc ( rgmii_rxc ),
+      .MDC ( MDC ),
+      .gmii_to_rgmii_0_MDIO ( gmii_to_rgmii_0_MDIO )
     );
 
 endmodule
