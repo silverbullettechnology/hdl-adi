@@ -1,20 +1,16 @@
 #-----------------------------------------------------------
 # PlanAhead v14.7 (64-bit)
 # Build 321239 by xbuild on Fri Sep 27 19:29:51 MDT 2013
-# Start of session at: Thu Mar 20 13:56:17 2014
-# Process ID: 11716
-# Log file: Z:/Projects/Consulting/CLASS/GitHubTemp/hdl-adi/cf_ad9361_sdrdc2_EDK14_7/planAhead.log
-# Journal file: Z:/Projects/Consulting/CLASS/GitHubTemp/hdl-adi/cf_ad9361_sdrdc2_EDK14_7\planAhead.jou
+# Start of session at: Fri Mar 28 10:35:02 2014
+# Process ID: 21180
+# Log file: Z:/Projects/Consulting/CLASS/GitHubFix/hdl-adi/cf_ad9361_sdrdc2_EDK14_7/planAhead.log
+# Journal file: Z:/Projects/Consulting/CLASS/GitHubFix/hdl-adi/cf_ad9361_sdrdc2_EDK14_7\planAhead.jou
 #-----------------------------------------------------------
 start_gui
-open_project {Z:\Projects\Consulting\CLASS\GitHubTemp\hdl-adi\cf_ad9361_sdrdc2_EDK14_7\project_1.ppr}
+open_project {Z:\Projects\Consulting\CLASS\GitHubFix\hdl-adi\cf_ad9361_sdrdc2_EDK14_7\project_1.ppr}
 reset_run synth_1
+write_xdc system_constraints.xdc
 reset_run impl_1
-launch_runs synth_1
-wait_on_run synth_1
-launch_runs impl_1
-wait_on_run impl_1
-reset_run synth_1
 launch_runs synth_1
 wait_on_run synth_1
 launch_runs impl_1
@@ -22,3 +18,5 @@ wait_on_run impl_1
 launch_runs impl_1 -to_step Bitgen
 wait_on_run impl_1
 open_run impl_1
+write_xdc system_constraints.xdc
+write_xdc -force system_constraints.xdc
