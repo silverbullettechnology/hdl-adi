@@ -14,7 +14,6 @@ td { min-width : 80px ; }
 <h2><a name="Top">Peripheral Selected</a></h2>
 <ul>
 <li>Quad SPI Flash</li>
-<li>Enet 0</li>
 <li>USB 0</li>
 <li>SD 0</li>
 <li>SD 1</li>
@@ -106,22 +105,7 @@ td { min-width : 80px ; }
 <tr bgcolor="#FAEBD7"><td></td><td>Feedback Clk</td><td></td><td>MIO 8</td></tr>
 <tr bgcolor="#FFFFFF"><td><a name="nor" >SRAM/NOR Flash</a></td>             <td></td><td></td><td>Disabled</td></tr>
 <tr bgcolor="#FFE4C4"><td><a name="nand" >NAND Flash</a></td>             <td></td><td></td><td>Disabled</td></tr>
-<tr bgcolor="#DEB887"><td><a name="Enet 0" >Enet 0</a></td>             <td></td><td></td><td>EMIO</td></tr>
-<tr bgcolor="#DEB887"><td></td><td></td><td>tx_clk</td><td>EMIO</td></tr>
-<tr bgcolor="#DEB887"><td></td><td></td><td>txd[3]</td><td>EMIO</td></tr>
-<tr bgcolor="#DEB887"><td></td><td></td><td>txd[2]</td><td>EMIO</td></tr>
-<tr bgcolor="#DEB887"><td></td><td></td><td>txd[1]</td><td>EMIO</td></tr>
-<tr bgcolor="#DEB887"><td></td><td></td><td>txd[0]</td><td>EMIO</td></tr>
-<tr bgcolor="#DEB887"><td></td><td></td><td>tx_ctl</td><td>EMIO</td></tr>
-<tr bgcolor="#DEB887"><td></td><td></td><td>rx_clk</td><td>EMIO</td></tr>
-<tr bgcolor="#DEB887"><td></td><td></td><td>rxd[3]</td><td>EMIO</td></tr>
-<tr bgcolor="#DEB887"><td></td><td></td><td>rxd[2]</td><td>EMIO</td></tr>
-<tr bgcolor="#DEB887"><td></td><td></td><td>rxd[1]</td><td>EMIO</td></tr>
-<tr bgcolor="#DEB887"><td></td><td></td><td>rxd[0]</td><td>EMIO</td></tr>
-<tr bgcolor="#DEB887"><td></td><td></td><td>rx_ctl</td><td>EMIO</td></tr>
-<tr bgcolor="#DEB887"><td></td><td>MDIO</td><td></td><td>EMIO</td></tr>
-<tr bgcolor="#DEB887"><td></td><td></td><td>mdc</td><td>EMIO</td></tr>
-<tr bgcolor="#DEB887"><td></td><td></td><td>mdio</td><td>EMIO</td></tr>
+<tr bgcolor="#DEB887"><td><a name="enet0" >Enet 0</a></td>             <td></td><td></td><td>Disabled</td></tr>
 <tr bgcolor="#DEB887"><td><a name="enet1" >Enet 1</a></td>             <td></td><td></td><td>Disabled</td></tr>
 <tr bgcolor="#7FFF00"><td><a name="USB 0" >USB 0</a></td>             <td></td><td></td><td>MIO 28 .. 39</td></tr>
 <tr bgcolor="#7FFF00"><td></td><td></td><td>clk</td><td><a href="#MIO 36">MIO 36</a></td></tr>
@@ -512,22 +496,6 @@ td { min-width : 80px ; }
 <tr><td >DIVISOR1</td><td class="hex">25:20</td><td class="hex">3f00000</td><td class="hex">2</td><td class="hex">200000</td></tr>
 <tr><td><b>DCI_CLK_CTRL @ 0XF8000128</td><td></td><td class="hex"><b>3f03f01</b></td><td></td><td class="hex"><b>203301</b></td></tr></table>
 </li>
-<li><p>Register : GEM0_RCLK_CTRL @ 0XF8000138</p>
-<table border="1"> 
-<tr><thead><th>Bitfield</th><th>Bits</th><th>Mask</th><th>Value</th><th>Shifted Value</th></thead></tr><tbody>
-<tr><td >CLKACT</td><td class="hex">0:0</td><td class="hex">1</td><td class="hex">1</td><td class="hex">1</td></tr>
-<tr><td >SRCSEL</td><td class="hex">4:4</td><td class="hex">10</td><td class="hex">1</td><td class="hex">10</td></tr>
-<tr><td><b>GEM0_RCLK_CTRL @ 0XF8000138</td><td></td><td class="hex"><b>11</b></td><td></td><td class="hex"><b>11</b></td></tr></table>
-</li>
-<li><p>Register : GEM0_CLK_CTRL @ 0XF8000140</p>
-<table border="1"> 
-<tr><thead><th>Bitfield</th><th>Bits</th><th>Mask</th><th>Value</th><th>Shifted Value</th></thead></tr><tbody>
-<tr><td >CLKACT</td><td class="hex">0:0</td><td class="hex">1</td><td class="hex">1</td><td class="hex">1</td></tr>
-<tr><td >SRCSEL</td><td class="hex">6:4</td><td class="hex">70</td><td class="hex">4</td><td class="hex">40</td></tr>
-<tr><td >DIVISOR</td><td class="hex">13:8</td><td class="hex">3f00</td><td class="hex">1</td><td class="hex">100</td></tr>
-<tr><td >DIVISOR1</td><td class="hex">25:20</td><td class="hex">3f00000</td><td class="hex">1</td><td class="hex">100000</td></tr>
-<tr><td><b>GEM0_CLK_CTRL @ 0XF8000140</td><td></td><td class="hex"><b>3f03f71</b></td><td></td><td class="hex"><b>100141</b></td></tr></table>
-</li>
 <li><p>Register : LQSPI_CLK_CTRL @ 0XF800014C</p>
 <table border="1"> 
 <tr><thead><th>Bitfield</th><th>Bits</th><th>Mask</th><th>Value</th><th>Shifted Value</th></thead></tr><tbody>
@@ -591,9 +559,9 @@ td { min-width : 80px ; }
 <table border="1"> 
 <tr><thead><th>Bitfield</th><th>Bits</th><th>Mask</th><th>Value</th><th>Shifted Value</th></thead></tr><tbody>
 <tr><td >SRCSEL</td><td class="hex">5:4</td><td class="hex">30</td><td class="hex">0</td><td class="hex">0</td></tr>
-<tr><td >DIVISOR0</td><td class="hex">13:8</td><td class="hex">3f00</td><td class="hex">4</td><td class="hex">400</td></tr>
+<tr><td >DIVISOR0</td><td class="hex">13:8</td><td class="hex">3f00</td><td class="hex">5</td><td class="hex">500</td></tr>
 <tr><td >DIVISOR1</td><td class="hex">25:20</td><td class="hex">3f00000</td><td class="hex">1</td><td class="hex">100000</td></tr>
-<tr><td><b>FPGA2_CLK_CTRL @ 0XF8000190</td><td></td><td class="hex"><b>3f03f30</b></td><td></td><td class="hex"><b>100400</b></td></tr></table>
+<tr><td><b>FPGA2_CLK_CTRL @ 0XF8000190</td><td></td><td class="hex"><b>3f03f30</b></td><td></td><td class="hex"><b>100500</b></td></tr></table>
 </li>
 <li><p>Register : FPGA3_CLK_CTRL @ 0XF80001A0</p>
 <table border="1"> 
@@ -615,7 +583,7 @@ td { min-width : 80px ; }
 <tr><td >DMA_CPU_2XCLKACT</td><td class="hex">0:0</td><td class="hex">1</td><td class="hex">1</td><td class="hex">1</td></tr>
 <tr><td >USB0_CPU_1XCLKACT</td><td class="hex">2:2</td><td class="hex">4</td><td class="hex">1</td><td class="hex">4</td></tr>
 <tr><td >USB1_CPU_1XCLKACT</td><td class="hex">3:3</td><td class="hex">8</td><td class="hex">1</td><td class="hex">8</td></tr>
-<tr><td >GEM0_CPU_1XCLKACT</td><td class="hex">6:6</td><td class="hex">40</td><td class="hex">1</td><td class="hex">40</td></tr>
+<tr><td >GEM0_CPU_1XCLKACT</td><td class="hex">6:6</td><td class="hex">40</td><td class="hex">0</td><td class="hex">0</td></tr>
 <tr><td >GEM1_CPU_1XCLKACT</td><td class="hex">7:7</td><td class="hex">80</td><td class="hex">0</td><td class="hex">0</td></tr>
 <tr><td >SDI0_CPU_1XCLKACT</td><td class="hex">10:10</td><td class="hex">400</td><td class="hex">1</td><td class="hex">400</td></tr>
 <tr><td >SDI1_CPU_1XCLKACT</td><td class="hex">11:11</td><td class="hex">800</td><td class="hex">1</td><td class="hex">800</td></tr>
@@ -630,7 +598,7 @@ td { min-width : 80px ; }
 <tr><td >GPIO_CPU_1XCLKACT</td><td class="hex">22:22</td><td class="hex">400000</td><td class="hex">1</td><td class="hex">400000</td></tr>
 <tr><td >LQSPI_CPU_1XCLKACT</td><td class="hex">23:23</td><td class="hex">800000</td><td class="hex">1</td><td class="hex">800000</td></tr>
 <tr><td >SMC_CPU_1XCLKACT</td><td class="hex">24:24</td><td class="hex">1000000</td><td class="hex">1</td><td class="hex">1000000</td></tr>
-<tr><td><b>APER_CLK_CTRL @ 0XF800012C</td><td></td><td class="hex"><b>1ffcccd</b></td><td></td><td class="hex"><b>1fc4c4d</b></td></tr></table>
+<tr><td><b>APER_CLK_CTRL @ 0XF800012C</td><td></td><td class="hex"><b>1ffcccd</b></td><td></td><td class="hex"><b>1fc4c0d</b></td></tr></table>
 </li>
 <li><p>Register : WDT_CLK_SEL @ 0XF8000304</p>
 <table border="1"> 
@@ -2962,7 +2930,6 @@ td { min-width : 80px ; }
 <h2><a name="Top">Peripheral Selected</a></h2>
 <ul>
 <li>Quad SPI Flash</li>
-<li>Enet 0</li>
 <li>USB 0</li>
 <li>SD 0</li>
 <li>SD 1</li>
@@ -3054,22 +3021,7 @@ td { min-width : 80px ; }
 <tr bgcolor="#FAEBD7"><td></td><td>Feedback Clk</td><td></td><td>MIO 8</td></tr>
 <tr bgcolor="#FFFFFF"><td><a name="nor" >SRAM/NOR Flash</a></td>             <td></td><td></td><td>Disabled</td></tr>
 <tr bgcolor="#FFE4C4"><td><a name="nand" >NAND Flash</a></td>             <td></td><td></td><td>Disabled</td></tr>
-<tr bgcolor="#DEB887"><td><a name="Enet 0" >Enet 0</a></td>             <td></td><td></td><td>EMIO</td></tr>
-<tr bgcolor="#DEB887"><td></td><td></td><td>tx_clk</td><td>EMIO</td></tr>
-<tr bgcolor="#DEB887"><td></td><td></td><td>txd[3]</td><td>EMIO</td></tr>
-<tr bgcolor="#DEB887"><td></td><td></td><td>txd[2]</td><td>EMIO</td></tr>
-<tr bgcolor="#DEB887"><td></td><td></td><td>txd[1]</td><td>EMIO</td></tr>
-<tr bgcolor="#DEB887"><td></td><td></td><td>txd[0]</td><td>EMIO</td></tr>
-<tr bgcolor="#DEB887"><td></td><td></td><td>tx_ctl</td><td>EMIO</td></tr>
-<tr bgcolor="#DEB887"><td></td><td></td><td>rx_clk</td><td>EMIO</td></tr>
-<tr bgcolor="#DEB887"><td></td><td></td><td>rxd[3]</td><td>EMIO</td></tr>
-<tr bgcolor="#DEB887"><td></td><td></td><td>rxd[2]</td><td>EMIO</td></tr>
-<tr bgcolor="#DEB887"><td></td><td></td><td>rxd[1]</td><td>EMIO</td></tr>
-<tr bgcolor="#DEB887"><td></td><td></td><td>rxd[0]</td><td>EMIO</td></tr>
-<tr bgcolor="#DEB887"><td></td><td></td><td>rx_ctl</td><td>EMIO</td></tr>
-<tr bgcolor="#DEB887"><td></td><td>MDIO</td><td></td><td>EMIO</td></tr>
-<tr bgcolor="#DEB887"><td></td><td></td><td>mdc</td><td>EMIO</td></tr>
-<tr bgcolor="#DEB887"><td></td><td></td><td>mdio</td><td>EMIO</td></tr>
+<tr bgcolor="#DEB887"><td><a name="enet0" >Enet 0</a></td>             <td></td><td></td><td>Disabled</td></tr>
 <tr bgcolor="#DEB887"><td><a name="enet1" >Enet 1</a></td>             <td></td><td></td><td>Disabled</td></tr>
 <tr bgcolor="#7FFF00"><td><a name="USB 0" >USB 0</a></td>             <td></td><td></td><td>MIO 28 .. 39</td></tr>
 <tr bgcolor="#7FFF00"><td></td><td></td><td>clk</td><td><a href="#MIO 36">MIO 36</a></td></tr>
@@ -3460,22 +3412,6 @@ td { min-width : 80px ; }
 <tr><td >DIVISOR1</td><td class="hex">25:20</td><td class="hex">3f00000</td><td class="hex">2</td><td class="hex">200000</td></tr>
 <tr><td><b>DCI_CLK_CTRL @ 0XF8000128</td><td></td><td class="hex"><b>3f03f01</b></td><td></td><td class="hex"><b>203301</b></td></tr></table>
 </li>
-<li><p>Register : GEM0_RCLK_CTRL @ 0XF8000138</p>
-<table border="1"> 
-<tr><thead><th>Bitfield</th><th>Bits</th><th>Mask</th><th>Value</th><th>Shifted Value</th></thead></tr><tbody>
-<tr><td >CLKACT</td><td class="hex">0:0</td><td class="hex">1</td><td class="hex">1</td><td class="hex">1</td></tr>
-<tr><td >SRCSEL</td><td class="hex">4:4</td><td class="hex">10</td><td class="hex">1</td><td class="hex">10</td></tr>
-<tr><td><b>GEM0_RCLK_CTRL @ 0XF8000138</td><td></td><td class="hex"><b>11</b></td><td></td><td class="hex"><b>11</b></td></tr></table>
-</li>
-<li><p>Register : GEM0_CLK_CTRL @ 0XF8000140</p>
-<table border="1"> 
-<tr><thead><th>Bitfield</th><th>Bits</th><th>Mask</th><th>Value</th><th>Shifted Value</th></thead></tr><tbody>
-<tr><td >CLKACT</td><td class="hex">0:0</td><td class="hex">1</td><td class="hex">1</td><td class="hex">1</td></tr>
-<tr><td >SRCSEL</td><td class="hex">6:4</td><td class="hex">70</td><td class="hex">4</td><td class="hex">40</td></tr>
-<tr><td >DIVISOR</td><td class="hex">13:8</td><td class="hex">3f00</td><td class="hex">1</td><td class="hex">100</td></tr>
-<tr><td >DIVISOR1</td><td class="hex">25:20</td><td class="hex">3f00000</td><td class="hex">1</td><td class="hex">100000</td></tr>
-<tr><td><b>GEM0_CLK_CTRL @ 0XF8000140</td><td></td><td class="hex"><b>3f03f71</b></td><td></td><td class="hex"><b>100141</b></td></tr></table>
-</li>
 <li><p>Register : LQSPI_CLK_CTRL @ 0XF800014C</p>
 <table border="1"> 
 <tr><thead><th>Bitfield</th><th>Bits</th><th>Mask</th><th>Value</th><th>Shifted Value</th></thead></tr><tbody>
@@ -3539,9 +3475,9 @@ td { min-width : 80px ; }
 <table border="1"> 
 <tr><thead><th>Bitfield</th><th>Bits</th><th>Mask</th><th>Value</th><th>Shifted Value</th></thead></tr><tbody>
 <tr><td >SRCSEL</td><td class="hex">5:4</td><td class="hex">30</td><td class="hex">0</td><td class="hex">0</td></tr>
-<tr><td >DIVISOR0</td><td class="hex">13:8</td><td class="hex">3f00</td><td class="hex">4</td><td class="hex">400</td></tr>
+<tr><td >DIVISOR0</td><td class="hex">13:8</td><td class="hex">3f00</td><td class="hex">5</td><td class="hex">500</td></tr>
 <tr><td >DIVISOR1</td><td class="hex">25:20</td><td class="hex">3f00000</td><td class="hex">1</td><td class="hex">100000</td></tr>
-<tr><td><b>FPGA2_CLK_CTRL @ 0XF8000190</td><td></td><td class="hex"><b>3f03f30</b></td><td></td><td class="hex"><b>100400</b></td></tr></table>
+<tr><td><b>FPGA2_CLK_CTRL @ 0XF8000190</td><td></td><td class="hex"><b>3f03f30</b></td><td></td><td class="hex"><b>100500</b></td></tr></table>
 </li>
 <li><p>Register : FPGA3_CLK_CTRL @ 0XF80001A0</p>
 <table border="1"> 
@@ -3563,7 +3499,7 @@ td { min-width : 80px ; }
 <tr><td >DMA_CPU_2XCLKACT</td><td class="hex">0:0</td><td class="hex">1</td><td class="hex">1</td><td class="hex">1</td></tr>
 <tr><td >USB0_CPU_1XCLKACT</td><td class="hex">2:2</td><td class="hex">4</td><td class="hex">1</td><td class="hex">4</td></tr>
 <tr><td >USB1_CPU_1XCLKACT</td><td class="hex">3:3</td><td class="hex">8</td><td class="hex">1</td><td class="hex">8</td></tr>
-<tr><td >GEM0_CPU_1XCLKACT</td><td class="hex">6:6</td><td class="hex">40</td><td class="hex">1</td><td class="hex">40</td></tr>
+<tr><td >GEM0_CPU_1XCLKACT</td><td class="hex">6:6</td><td class="hex">40</td><td class="hex">0</td><td class="hex">0</td></tr>
 <tr><td >GEM1_CPU_1XCLKACT</td><td class="hex">7:7</td><td class="hex">80</td><td class="hex">0</td><td class="hex">0</td></tr>
 <tr><td >SDI0_CPU_1XCLKACT</td><td class="hex">10:10</td><td class="hex">400</td><td class="hex">1</td><td class="hex">400</td></tr>
 <tr><td >SDI1_CPU_1XCLKACT</td><td class="hex">11:11</td><td class="hex">800</td><td class="hex">1</td><td class="hex">800</td></tr>
@@ -3578,7 +3514,7 @@ td { min-width : 80px ; }
 <tr><td >GPIO_CPU_1XCLKACT</td><td class="hex">22:22</td><td class="hex">400000</td><td class="hex">1</td><td class="hex">400000</td></tr>
 <tr><td >LQSPI_CPU_1XCLKACT</td><td class="hex">23:23</td><td class="hex">800000</td><td class="hex">1</td><td class="hex">800000</td></tr>
 <tr><td >SMC_CPU_1XCLKACT</td><td class="hex">24:24</td><td class="hex">1000000</td><td class="hex">1</td><td class="hex">1000000</td></tr>
-<tr><td><b>APER_CLK_CTRL @ 0XF800012C</td><td></td><td class="hex"><b>1ffcccd</b></td><td></td><td class="hex"><b>1fc4c4d</b></td></tr></table>
+<tr><td><b>APER_CLK_CTRL @ 0XF800012C</td><td></td><td class="hex"><b>1ffcccd</b></td><td></td><td class="hex"><b>1fc4c0d</b></td></tr></table>
 </li>
 <li><p>Register : WDT_CLK_SEL @ 0XF8000304</p>
 <table border="1"> 
@@ -5951,7 +5887,6 @@ td { min-width : 80px ; }
 <h2><a name="Top">Peripheral Selected</a></h2>
 <ul>
 <li>Quad SPI Flash</li>
-<li>Enet 0</li>
 <li>USB 0</li>
 <li>SD 0</li>
 <li>SD 1</li>
@@ -6043,22 +5978,7 @@ td { min-width : 80px ; }
 <tr bgcolor="#FAEBD7"><td></td><td>Feedback Clk</td><td></td><td>MIO 8</td></tr>
 <tr bgcolor="#FFFFFF"><td><a name="nor" >SRAM/NOR Flash</a></td>             <td></td><td></td><td>Disabled</td></tr>
 <tr bgcolor="#FFE4C4"><td><a name="nand" >NAND Flash</a></td>             <td></td><td></td><td>Disabled</td></tr>
-<tr bgcolor="#DEB887"><td><a name="Enet 0" >Enet 0</a></td>             <td></td><td></td><td>EMIO</td></tr>
-<tr bgcolor="#DEB887"><td></td><td></td><td>tx_clk</td><td>EMIO</td></tr>
-<tr bgcolor="#DEB887"><td></td><td></td><td>txd[3]</td><td>EMIO</td></tr>
-<tr bgcolor="#DEB887"><td></td><td></td><td>txd[2]</td><td>EMIO</td></tr>
-<tr bgcolor="#DEB887"><td></td><td></td><td>txd[1]</td><td>EMIO</td></tr>
-<tr bgcolor="#DEB887"><td></td><td></td><td>txd[0]</td><td>EMIO</td></tr>
-<tr bgcolor="#DEB887"><td></td><td></td><td>tx_ctl</td><td>EMIO</td></tr>
-<tr bgcolor="#DEB887"><td></td><td></td><td>rx_clk</td><td>EMIO</td></tr>
-<tr bgcolor="#DEB887"><td></td><td></td><td>rxd[3]</td><td>EMIO</td></tr>
-<tr bgcolor="#DEB887"><td></td><td></td><td>rxd[2]</td><td>EMIO</td></tr>
-<tr bgcolor="#DEB887"><td></td><td></td><td>rxd[1]</td><td>EMIO</td></tr>
-<tr bgcolor="#DEB887"><td></td><td></td><td>rxd[0]</td><td>EMIO</td></tr>
-<tr bgcolor="#DEB887"><td></td><td></td><td>rx_ctl</td><td>EMIO</td></tr>
-<tr bgcolor="#DEB887"><td></td><td>MDIO</td><td></td><td>EMIO</td></tr>
-<tr bgcolor="#DEB887"><td></td><td></td><td>mdc</td><td>EMIO</td></tr>
-<tr bgcolor="#DEB887"><td></td><td></td><td>mdio</td><td>EMIO</td></tr>
+<tr bgcolor="#DEB887"><td><a name="enet0" >Enet 0</a></td>             <td></td><td></td><td>Disabled</td></tr>
 <tr bgcolor="#DEB887"><td><a name="enet1" >Enet 1</a></td>             <td></td><td></td><td>Disabled</td></tr>
 <tr bgcolor="#7FFF00"><td><a name="USB 0" >USB 0</a></td>             <td></td><td></td><td>MIO 28 .. 39</td></tr>
 <tr bgcolor="#7FFF00"><td></td><td></td><td>clk</td><td><a href="#MIO 36">MIO 36</a></td></tr>
@@ -6449,22 +6369,6 @@ td { min-width : 80px ; }
 <tr><td >DIVISOR1</td><td class="hex">25:20</td><td class="hex">3f00000</td><td class="hex">2</td><td class="hex">200000</td></tr>
 <tr><td><b>DCI_CLK_CTRL @ 0XF8000128</td><td></td><td class="hex"><b>3f03f01</b></td><td></td><td class="hex"><b>203301</b></td></tr></table>
 </li>
-<li><p>Register : GEM0_RCLK_CTRL @ 0XF8000138</p>
-<table border="1"> 
-<tr><thead><th>Bitfield</th><th>Bits</th><th>Mask</th><th>Value</th><th>Shifted Value</th></thead></tr><tbody>
-<tr><td >CLKACT</td><td class="hex">0:0</td><td class="hex">1</td><td class="hex">1</td><td class="hex">1</td></tr>
-<tr><td >SRCSEL</td><td class="hex">4:4</td><td class="hex">10</td><td class="hex">1</td><td class="hex">10</td></tr>
-<tr><td><b>GEM0_RCLK_CTRL @ 0XF8000138</td><td></td><td class="hex"><b>11</b></td><td></td><td class="hex"><b>11</b></td></tr></table>
-</li>
-<li><p>Register : GEM0_CLK_CTRL @ 0XF8000140</p>
-<table border="1"> 
-<tr><thead><th>Bitfield</th><th>Bits</th><th>Mask</th><th>Value</th><th>Shifted Value</th></thead></tr><tbody>
-<tr><td >CLKACT</td><td class="hex">0:0</td><td class="hex">1</td><td class="hex">1</td><td class="hex">1</td></tr>
-<tr><td >SRCSEL</td><td class="hex">6:4</td><td class="hex">70</td><td class="hex">4</td><td class="hex">40</td></tr>
-<tr><td >DIVISOR</td><td class="hex">13:8</td><td class="hex">3f00</td><td class="hex">1</td><td class="hex">100</td></tr>
-<tr><td >DIVISOR1</td><td class="hex">25:20</td><td class="hex">3f00000</td><td class="hex">1</td><td class="hex">100000</td></tr>
-<tr><td><b>GEM0_CLK_CTRL @ 0XF8000140</td><td></td><td class="hex"><b>3f03f71</b></td><td></td><td class="hex"><b>100141</b></td></tr></table>
-</li>
 <li><p>Register : LQSPI_CLK_CTRL @ 0XF800014C</p>
 <table border="1"> 
 <tr><thead><th>Bitfield</th><th>Bits</th><th>Mask</th><th>Value</th><th>Shifted Value</th></thead></tr><tbody>
@@ -6528,9 +6432,9 @@ td { min-width : 80px ; }
 <table border="1"> 
 <tr><thead><th>Bitfield</th><th>Bits</th><th>Mask</th><th>Value</th><th>Shifted Value</th></thead></tr><tbody>
 <tr><td >SRCSEL</td><td class="hex">5:4</td><td class="hex">30</td><td class="hex">0</td><td class="hex">0</td></tr>
-<tr><td >DIVISOR0</td><td class="hex">13:8</td><td class="hex">3f00</td><td class="hex">4</td><td class="hex">400</td></tr>
+<tr><td >DIVISOR0</td><td class="hex">13:8</td><td class="hex">3f00</td><td class="hex">5</td><td class="hex">500</td></tr>
 <tr><td >DIVISOR1</td><td class="hex">25:20</td><td class="hex">3f00000</td><td class="hex">1</td><td class="hex">100000</td></tr>
-<tr><td><b>FPGA2_CLK_CTRL @ 0XF8000190</td><td></td><td class="hex"><b>3f03f30</b></td><td></td><td class="hex"><b>100400</b></td></tr></table>
+<tr><td><b>FPGA2_CLK_CTRL @ 0XF8000190</td><td></td><td class="hex"><b>3f03f30</b></td><td></td><td class="hex"><b>100500</b></td></tr></table>
 </li>
 <li><p>Register : FPGA3_CLK_CTRL @ 0XF80001A0</p>
 <table border="1"> 
@@ -6552,7 +6456,7 @@ td { min-width : 80px ; }
 <tr><td >DMA_CPU_2XCLKACT</td><td class="hex">0:0</td><td class="hex">1</td><td class="hex">1</td><td class="hex">1</td></tr>
 <tr><td >USB0_CPU_1XCLKACT</td><td class="hex">2:2</td><td class="hex">4</td><td class="hex">1</td><td class="hex">4</td></tr>
 <tr><td >USB1_CPU_1XCLKACT</td><td class="hex">3:3</td><td class="hex">8</td><td class="hex">1</td><td class="hex">8</td></tr>
-<tr><td >GEM0_CPU_1XCLKACT</td><td class="hex">6:6</td><td class="hex">40</td><td class="hex">1</td><td class="hex">40</td></tr>
+<tr><td >GEM0_CPU_1XCLKACT</td><td class="hex">6:6</td><td class="hex">40</td><td class="hex">0</td><td class="hex">0</td></tr>
 <tr><td >GEM1_CPU_1XCLKACT</td><td class="hex">7:7</td><td class="hex">80</td><td class="hex">0</td><td class="hex">0</td></tr>
 <tr><td >SDI0_CPU_1XCLKACT</td><td class="hex">10:10</td><td class="hex">400</td><td class="hex">1</td><td class="hex">400</td></tr>
 <tr><td >SDI1_CPU_1XCLKACT</td><td class="hex">11:11</td><td class="hex">800</td><td class="hex">1</td><td class="hex">800</td></tr>
@@ -6567,7 +6471,7 @@ td { min-width : 80px ; }
 <tr><td >GPIO_CPU_1XCLKACT</td><td class="hex">22:22</td><td class="hex">400000</td><td class="hex">1</td><td class="hex">400000</td></tr>
 <tr><td >LQSPI_CPU_1XCLKACT</td><td class="hex">23:23</td><td class="hex">800000</td><td class="hex">1</td><td class="hex">800000</td></tr>
 <tr><td >SMC_CPU_1XCLKACT</td><td class="hex">24:24</td><td class="hex">1000000</td><td class="hex">1</td><td class="hex">1000000</td></tr>
-<tr><td><b>APER_CLK_CTRL @ 0XF800012C</td><td></td><td class="hex"><b>1ffcccd</b></td><td></td><td class="hex"><b>1fc4c4d</b></td></tr></table>
+<tr><td><b>APER_CLK_CTRL @ 0XF800012C</td><td></td><td class="hex"><b>1ffcccd</b></td><td></td><td class="hex"><b>1fc4c0d</b></td></tr></table>
 </li>
 <li><p>Register : WDT_CLK_SEL @ 0XF8000304</p>
 <table border="1"> 

@@ -15,6 +15,7 @@
 	<Step Id="xdl">
 	</Step>
 	<Step Id="bitgen">
+		<Option Id="MoreOptsStr"><![CDATA[-g userid:0x371592f2]]></Option>
 	</Step>
 </Strategy>
 

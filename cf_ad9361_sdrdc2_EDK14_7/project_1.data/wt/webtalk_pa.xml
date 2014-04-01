@@ -3,10 +3,10 @@
 <!--The data in this file is primarily intended for consumption by Xilinx tools.
 The structure and the elements are likely to change over the next few releases.
 This means code written to parse this file will need to be revisited each subsequent release.-->
-<application name="pa" timeStamp="Mon Mar 31 19:40:56 2014">
+<application name="pa" timeStamp="Mon Mar 31 19:53:34 2014">
 <section name="Project Information" visible="false">
 <property name="ProjectID" value="86a957a2d43c4b52a0e2d16974351853" type="ProjectID"/>
-<property name="ProjectIteration" value="82" type="ProjectIteration"/>
+<property name="ProjectIteration" value="83" type="ProjectIteration"/>
 </section>
 <section name="PlanAhead Usage" visible="true">
 <item name="Project Data">
@@ -22,29 +22,29 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="CreateTopHDL" value="9" type="JavaHandler"/>
 <property name="EditDelete" value="1" type="JavaHandler"/>
 <property name="EditFind" value="3" type="JavaHandler"/>
-<property name="ExportHardware" value="33" type="JavaHandler"/>
+<property name="ExportHardware" value="34" type="JavaHandler"/>
 <property name="Generate Target" value="1" type="JavaHandler"/>
 <property name="LaunchChipscopeAnalyzer" value="1" type="JavaHandler"/>
 <property name="LaunchEDK" value="76" type="JavaHandler"/>
 <property name="LaunchImpact" value="1" type="JavaHandler"/>
 <property name="NewProject" value="1" type="JavaHandler"/>
 <property name="OpenProject" value="2" type="JavaHandler"/>
-<property name="ProjectSettings" value="6" type="JavaHandler"/>
+<property name="ProjectSettings" value="8" type="JavaHandler"/>
 <property name="ResetLayout" value="1" type="JavaHandler"/>
 <property name="ResourceEstimation" value="4" type="JavaHandler"/>
-<property name="RunBitgen" value="81" type="JavaHandler"/>
+<property name="RunBitgen" value="82" type="JavaHandler"/>
 <property name="RunDesignAhead" value="1" type="JavaHandler"/>
 <property name="RunImplementation" value="54" type="JavaHandler"/>
 <property name="RunSynthesis" value="61" type="JavaHandler"/>
-<property name="ShowView" value="24" type="JavaHandler"/>
+<property name="ShowView" value="25" type="JavaHandler"/>
 <property name="ViewInstTempl" value="1" type="JavaHandler"/>
-<property name="ViewTaskImplementation" value="33" type="JavaHandler"/>
+<property name="ViewTaskImplementation" value="36" type="JavaHandler"/>
 <property name="ViewTaskSynthesis" value="3" type="JavaHandler"/>
 </item>
 <item name="Other">
-<property name="GuiMode" value="107" type="GuiMode"/>
+<property name="GuiMode" value="109" type="GuiMode"/>
 <property name="BatchMode" value="0" type="BatchMode"/>
-<property name="TclMode" value="96" type="TclMode"/>
+<property name="TclMode" value="98" type="TclMode"/>
 <property name="ISEMode" value="0" type="ISEMode"/>
 </item>
 </section>
